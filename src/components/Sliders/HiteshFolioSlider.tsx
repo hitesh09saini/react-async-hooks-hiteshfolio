@@ -1,9 +1,12 @@
 
 import * as React from 'react';
-import 'hiteshfolio.slider.css'
+
 interface HiteshFolioSliderProps {
     images: string[];
 }
+
+
+
 
 const HiteshFolioSlider: React.FC<HiteshFolioSliderProps> = ({ images }) => {
 
@@ -77,8 +80,12 @@ const HiteshFolioSlider: React.FC<HiteshFolioSliderProps> = ({ images }) => {
         <div className="relative">
             <div
                 ref={sliderRef}
-                className="flex w-full h-[500px] overflow-x-scroll scroll-smooth snap-x snap-mandatory no-scrollbar"
-                style={{ scrollBehavior: 'smooth' }}
+                className="[&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none] flex w-full h-[500px] overflow-x-scroll scroll-smooth snap-x snap-mandatory no-scrollbar"
+                style={{
+                    scrollBehavior: 'smooth',
+                    msOverflowStyle: 'none',
+                    scrollbarWidth: 'none',
+                }}
             >
                 {cloneImages.map((item, index) => (
                     <div key={index} className='relative w-full h-full'>

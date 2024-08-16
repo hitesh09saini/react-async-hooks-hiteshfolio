@@ -1,1 +1,2 @@
-export  *  from './components/Sliders/HiteshFolioSlider'
+export { default as HiteshFolioSlider } from './components/Sliders/HiteshFolioSlider';
+
